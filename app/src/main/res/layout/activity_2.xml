@@ -10,26 +10,20 @@
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="131dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="196dp"
         android:layout_marginEnd="161dp"
-        android:layout_marginBottom="321dp"
         android:onClick="retour"
         android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="169dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="131dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="400dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,8 +32,46 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/MonTexte"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:hint="hint" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="113dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="lancePage1"
+        android:text="Page1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="108dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="lancePage2"
+        android:text="Page2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frame"
+        android:name="UPsay.ET5.FragmentHaut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_haut" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
